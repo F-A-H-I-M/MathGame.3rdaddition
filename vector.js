@@ -1447,7 +1447,7 @@ styleresult()
 
 
 
-document.getElementById("resultbox").style.height="50rem"
+document.getElementById("resultbox").style.height="40rem"
 
 document.getElementById("resultbox").style.border="solid 0.1rem tomato"
 
