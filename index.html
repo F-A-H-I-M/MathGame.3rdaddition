@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+     <meta name="viewport" 
+    content="width=device-width, initial-scale=1">
+    <style>
+    *{
+    margin:0;
+    padding:0;    
+    }                   
+    h1{
+    color:white;
+    background-color:tomato; 
+    text-align:center;  
+    }    
+    #math{
+    font-size:2rem;     
+    }      
+    #questionno{
+    font-size:.8rem;
+    text-align:right;
+    padding:0 1rem;    
+    }   
+    #game{
+    font-size:1rem;     
+    }             
+    #second{
+    font-size:1rem; 
+    font-style:italic;        
+    }
+    #type{
+    text-align:center;
+    border:solid 0.2rem tomato;
+    }
+    a:active{
+    text-decoration:none;
+    font-size:1.2rem; 
+    color:black;
+    padding:0.3rem;
+        
+    }
+    a:hover{
+    text-decoration:none;
+    font-size:1.2rem; 
+    color:black;
+    padding:0.3rem;  
+    
+    }
+    a:visited{
+    text-decoration:none;
+    font-size:1.2rem; 
+    color:black;
+    padding:0.3rem;
+    
+    }
+     a:link{
+    text-decoration:none;
+    font-size:1.2rem; 
+    color:black;
+    padding:0.3rem;
+    }
+    
+    #v{
+    color:tomato;    
+    }
+    
+    
+    
+    main{
+    border:solid .4rem #003263f4;     
+    text-align:center;
+    padding-bottom:3rem;
+    }
+    
+    
+    #objective{
+      height:3rem; 
+    }
+    
+    
+    ol{
+    text-align:left;   
+    padding-left:3rem; 
+    margin:1.5rem 2rem;      
+    }
+    li{
+    padding:.5rem  .5rem;    
+    }    
+    button{
+    background-color:#00136a;
+    color:white;
+    padding:.3rem 1.3rem;
+    font-size:1.3rem;
+    border:solid .1rem #7b000f;
+    border-radius:2rem 2rem;   
+    margin:1rem;    
+    }        
+    #grid{
+    display:grid;
+    grid-template-columns:auto auto;                
+    }   
+    #rulebutton{    
+    background-color:white;
+    color:black;
+    padding:0 1rem;
+    font-size:.8rem;
+    border:solid  .25rem #7b000f;
+    border-radius:0;
+    margin:0;
+    } 
+    #b{    
+    text-align:left;
+    }
+    #rulebox{
+    font-size:.9rem;
+    color:#940d9f;
+    text-align:center;
+    border:solid  .2rem  #7b000f;
+    padding:0 1rem;    
+    }    
+    #info{
+    font-size:1.1rem;
+    border:solid  .2rem  #7b000f;
+    margin:0 1rem;
+    color:#3a3d46;
+    }    
+ 
+    #comment{
+    border:solid gray 0.03rem;
+    margin:1rem;
+    border-radius:1rem 3rem;
+    font-size:1rem;
+    padding:0.3rem; 
+    }
+    
+    .vector{    
+    text-decoration:overline;  
+    font-weight:bold;
+    }
+    
+    #question{
+        padding:0.5rem 0rem;
+    }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+   #resultbox{        
+     
+   overflow-x:scroll;   
+   overflow-y:scroll;
+   
+    }  
+    
+  
+    
+    
+   .resultdiv{
+     border:solid 0.3rem tomato;     
+     padding:0.1rem 0.3rem;
+     margin:0.1rem 0.1rem;  
+       
+   }
+    
+   .resultquestionno{
+    text-align:right;  
+    color:#3b0200;  
+    font-size:1rem; 
+    padding-bottom:0.5rem;    
+   }
+   
+   .resultquestion{
+    text-align:center;          
+   }
+    
+   
+   .resultli{
+    
+    margin:0.2rem;
+    padding:0.1rem;
+    
+   
+   }
+   
+   .resultanstype{
+    text-align:center;
+    font-size:1.3rem;
+    padding-bottom:1rem;
+   
+   
+   }
+   
+   
+   
+    
+  #spancorrect{
+         color:green;
+        
+         text-align:center;
+         font-size:1.6rem;
+         
+         padding-left:0.5rem;
+      }
+      
+   #spanwrong{
+         color:red;        
+         text-align:center;
+         font-size:2rem;
+         margin:0.5rem;
+         padding-left:1rem;
+      }
+      
+          
+   
+                    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+                         
+    
+                      
+@property --p{ syntax: '<number>'; inherits: true; initial-value: 60; }
+
+.pie { --w:12rem; width:var(--w); aspect-ratio:1; position:relative; display:inline-grid; margin:5px; place-content:center; font-size:1.5rem; font-weight:bold; font-family:sans-serif;
+
+
+ }
+ .pie:before, .pie:after { content:""; position:absolute; border-radius:50%; 
+border:solid .01rem gray; }
+  .pie:before { inset:0; background: radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat, conic-gradient(var(--c) calc(var(--p)*1%),#0000 0); -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b))); mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b))); }
+   .pie:after { inset:calc(50% - var(--b)/2); background:var(--c); transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2)); }
+    .animate { animation:p 2s 1s both; } 
+     @keyframes p { from{--p:0} }
+      body { background:; }
+ </style>    
+</head>
+ <body>
+  <headder>   
+   <h1><span id="math">MATH</span><span id="game">GAME</span>
+   <br><span id="second">(third addition)</span></h1>  
+   <nav id="type">
+     <a id="a" href="">------</a>
+     <a id="v" href="">Vector</a>
+     <a id="t" href="">------</a>
+     <br> 
+     <a id="p" href="">------</a>
+    <!--  <a id="s" href="">Statistics</a>  -->
+   </nav>                   
+  </headder>    
+  <main>
+      
+   <div id="grid"> 
+    <p id="b">
+     <button type="button" id="rulebutton" onclick="rule1()">Rule
+     </button>
+    </p>
+      
+    <p id="questionno"></p>
+   </div>
+   
+   <p id="rulebox"></p>   
+   
+   
+   
+   <div id="objective"></div>    
+   <div id="button">
+    <button type="submit" id="next" onclick="start()">Start
+    </button>
+   </div>  
+   
+        
+                   
+  </main>      
+     
+    <div id="resultbox">       
+     
+    </div>
+                        
+<script src="vector.js"></script>      
+</body>
+</html>
