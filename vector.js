@@ -1,4 +1,4 @@
-let totalturn=5;
+let totalturn=15;
 let questionarray=[0]
 let optionarray=[0]
 let anscheckarray=[0]
@@ -1447,7 +1447,7 @@ styleresult()
 
 
 
-document.getElementById("resultbox").style.height="30rem"
+document.getElementById("resultbox").style.height="60rem"
 
 document.getElementById("resultbox").style.border="solid 0.1rem tomato"
 
