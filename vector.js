@@ -1024,7 +1024,7 @@ ans2=(v1+v2+v3)**0.5
 ans2=Number(ans2).toFixed(2)
 ans3=(v1+v2+v3)*0.5
 ans3=Number(ans3).toFixed(2)
-ans4=(b*f-a*d+a*e-c*f+c*d-b*e)**0.5
+ans4=((v1+v2+v3)**0.5)*2
 ans4=Number(ans4).toFixed(2)
 }
 
@@ -1075,7 +1075,7 @@ ans2=(v1+v2+v3)**0.5
 ans2=Number(ans2).toFixed(2)
 ans3=(v1+v2+v3)*0.5
 ans3=Number(ans3).toFixed(2)
-ans4=(b*f-a*d+a*e-c*f+c*d-b*e)**0.5
+ans4=(v1+v2+v3)**0.6
 ans4=Number(ans4).toFixed(2)
 }
 
